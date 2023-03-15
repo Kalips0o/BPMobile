@@ -18,7 +18,7 @@ function changeLocalization(localization){
     if(!localizations.includes(localization)) localization = 'en'
     dataLocalization.dataset.localization = localization
 
-    fetch(`./Localizations/${localization}.json`)
+    fetch(`./localizations/${localization}.json`)
     .then(res => res.json())
     .then((data) => {
         textArr.forEach((e) => {
